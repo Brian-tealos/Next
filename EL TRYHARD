@@ -86,6 +86,9 @@ get pods -A servicios-declaracion
 scale deployment --all --replicas=3 -n servicios-declaracion
 scale deployment --all --replicas=0 -n servicios-declaracion
 
+PARA REINICIAR UN SOLO POD
+
+kubectl delete pod <nombre-del-pod> -n servicios-declaracion
 -----------------------------------------------------------------------
 
 Usuario Airflow
