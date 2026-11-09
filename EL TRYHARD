@@ -79,7 +79,7 @@ SERVICIOS:
 
 apagar todos los servicios comando
 
-kubectl get deploy -n servicios-declaracion \ | awk 'NR>1 && $1!="ldap" {print $1}' \ | xargs -I {} kubectl scale deploy {} --replicas=0 -n servicios-declaracion
+
 
 -----------------------------------------------------------------------
 
