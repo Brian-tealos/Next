@@ -2,29 +2,29 @@ KeePass
 
 Dba#M4st3rñ
 
--------------------------------------------------------
+-----------------------------------------------------------
 cat /home/oas/shell/enviar_backup_drs.sh
 
 tail -fn 100 /home/oas/scp.log
 
 oas
 
--------------------------------------------------------
+-----------------------------------------------------------------
 
 en el drs entrar con usuario perso y subir a root
 
 
---------------------------------------------------------
+------------------------------------------------------------------
 
 lsnrctl status (listener control)
 
 
--------------------------------------------------------
+--------------------------------------------------------------------
 
 tnsping cygnus.seniat.gov.ve 10 (comando para verificar latencia)
 
 
---------------------------------------------------------
+--------------------------------------------------------------
 
 comando opmn para visualizar contenedores en stop,down,init:
 watch -n1 'opmnctl status -l | grep -ie OC4J | grep -iv home | grep -v Alive | awk '\''{print $3, $7}'\'''
@@ -115,3 +115,5 @@ ps -fp 10028208
 3- (Si confirmas que es un proceso viejo o una tarea colgada que ya no debería estar ejecutándose, mátalo de forma limpia con una señal de terminación forzada:)
 
 kill -9 10028208
+
+-----------------------------------------------------------------------------------------
