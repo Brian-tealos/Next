@@ -97,9 +97,21 @@ admin admin
 
 ------------------------------------------------------------------------
 
-LINEA DE PRUEBA
+Liberar espacio de disco al 100% CYGNUS
+
+rm -rf 071126 241026
+
+1- (Comando para listar los procesos que mantienen recursos abiertos dentro de ese directorio)
+
+fuser -cu /rman/SENIAT/full_online
+
+resultado de ejemplo: /rman/SENIAT/full_online:  10028208c(oracle)
 
 
-LINEA DE PRUEBA X2
+2- (Ejecuta el siguiente comando para ver exactamente qué comando o script de RMAN está corriendo bajo ese PID:)
 
+ps -fp 10028208
 
+3- (Si confirmas que es un proceso viejo o una tarea colgada que ya no debería estar ejecutándose, mátalo de forma limpia con una señal de terminación forzada:)
+
+kill -9 10028208
