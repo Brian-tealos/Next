@@ -81,6 +81,10 @@ apagar todos los servicios comando
 
 K8S APPS / K8S SD / MASTER / S01
 
+get pods -A servicios-declaracion
+scale deployment --all --replicas=3 -n servicios-declaracion
+scale deployment --all --replicas=0 -n servicios-declaracion
+
 -----------------------------------------------------------------------
 
 Usuario Airflow
