@@ -1,0 +1,91 @@
+KeePass
+
+Dba#M4st3rñ
+
+-------------------------------------------------------
+cat /home/oas/shell/enviar_backup_drs.sh
+
+tail -fn 100 /home/oas/scp.log
+
+oas
+
+-------------------------------------------------------
+
+en el drs entrar con usuario perso y subir a root
+
+
+--------------------------------------------------------
+
+lsnrctl status (listener control)
+
+
+-------------------------------------------------------
+
+tnsping cygnus.seniat.gov.ve 10 (comando para verificar latencia)
+
+
+--------------------------------------------------------
+
+comando opmn para visualizar contenedores en stop,down,init:
+watch -n1 'opmnctl status -l | grep -ie OC4J | grep -iv home | grep -v Alive | awk '\''{print $3, $7}'\'''
+
+-------------------------------------------------------------------
+
+opmnctl startproc process-type=OC4J_IMPRENTA (comando para subir un oc4j en especifico)
+
+------------------------------------------------------------------
+
+Control de cambio (guardar el file en el folder DB)
+
+Luego hacer el backup y pegar el .jar en el directorio
+
+-----------------------------------------------------------------
+
+Credenciales del cluster QA usuario root
+
+export KUBECONFIG=/etc/kubernetes/admin.conf
+
+
+----------------------------------------------------------------
+
+URL de servicio declaracion grafana
+
+http://10.156.80.115:3000/d/qfavsgcbdnheytsvsn/31da8b5?orgId=1&from=now-15m&to=now&timezone=browser&refresh=30s
+
+
+------------------------------------------------------------------
+
+ACCESO A CYGNUS_PROD TOAD
+
+ BAANGULO
+
+ *Baangulo--.
+
+------------------------------------------------------------------------
+
+Plataforma De Internet
+
+SERVICIOS:
+
+- Contribuyentes.
+- Funcionarios.
+- Retenciones. 172.16.16.187
+- RIF. 172.16.16.121
+- Servicio Declaración. (apagar todos los servicios)
+- DAGS (Airflow).
+- IGTF (Mulesoft). 10.156.80.126
+- Mule Plaza Venezuela. 172.17.17.198
+- PDI Plaza Venezuela.
+
+apagar todos los servicios comando
+
+kubectl get deploy -n servicios-declaracion \ | awk 'NR>1 && $1!="ldap" {print $1}' \ | xargs -I {} kubectl scale deploy {} --replicas=0 -n servicios-declaracion
+
+-----------------------------------------------------------------------
+
+Usuario Airflow
+
+admin admin
+
+------------------------------------------------------------------------
+
