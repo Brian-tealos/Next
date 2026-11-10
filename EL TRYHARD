@@ -117,3 +117,16 @@ ps -fp 10028208
 kill -9 10028208
 
 -----------------------------------------------------------------------------------------
+
+Actulizar imagen docker ambiente de QA
+
+ubicar la carpeta y abrir el git bash
+
+kqa / kenv
+
+vi (nombre del servicio)
+
+k delete -f nombre-del-servicio
+
+k apply -f nombre-del-servicio
+
