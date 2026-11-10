@@ -30,8 +30,14 @@ comando opmn para visualizar contenedores en stop,down,init:
 watch -n1 'opmnctl status -l | grep -ie OC4J | grep -iv home | grep -v Alive | awk '\''{print $3, $7}'\'''
 
 -------------------------------------------------------------------
+(Ruta para subir un OC4J en especifico)
 
-opmnctl startproc process-type=OC4J_IMPRENTA (comando para subir un oc4j en especifico)
+/oracle/oas/1013/j2ee/OC4J_NOMBRE_CONTENEDOR/config 
+
+cat server.xml (eliminar los caracteres de la ultima linea)
+
+
+opmnctl startproc process-type=OC4J_NOMBRE_CONTENEDOR (comando para subir un oc4j en especifico)
 
 ------------------------------------------------------------------
 
@@ -129,4 +135,12 @@ vi (nombre del servicio)
 k delete -f nombre-del-servicio
 
 k apply -f nombre-del-servicio
+
+-------------------------------------------------------------
+
+find -type f
+
+tail -n 50 /oracle/oas/1013/opmn/logs/*OC4J_CONSULTA*.log
+
+----------------------------------------------------------------
 
