@@ -144,3 +144,8 @@ tail -n 50 /oracle/oas/1013/opmn/logs/*OC4J_CONSULTA*.log
 
 ----------------------------------------------------------------
 
+SERVIDORES
+
+172.16.40.10 - Seniatso2026
+
+172.17.17.242 - Seniatso2026--. / root lCoPr1b504lXU21Z
