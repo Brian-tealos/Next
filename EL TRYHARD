@@ -132,6 +132,12 @@ kqa / kenv
 
 vi (nombre del servicio)
 
+yy (copiar linea)
+
+o (insertar linea)
+
+p (pegar linea)
+
 k delete -f nombre-del-servicio
 
 k apply -f nombre-del-servicio
@@ -149,3 +155,14 @@ SERVIDORES
 172.16.40.10 - Seniatso2026
 
 172.17.17.242 - Seniatso2026--. / root lCoPr1b504lXU21Z
+
+---------------------------------------------------------------
+
+Comando para ver los discos
+
+df -h / df -g
+
+Comando para ver el storage de ese directorio
+
+du -sh *
+
