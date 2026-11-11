@@ -1,8 +1,25 @@
-KeePass
+ACCESO A KeePass
 
 Dba#M4st3rñ
 
+------------------------------------------------------------
+
+ACCESO A CYGNUS_PROD TOAD
+
+ BAANGULO
+
+ *Baangulo--.
+
 -----------------------------------------------------------
+
+ACCESO A SERVIDORES
+
+172.16.40.10 - Seniatso2026
+
+172.17.17.242 - Seniatso2026--. / root lCoPr1b504lXU21Z
+
+-------------------------------------------------------------
+
 cat /home/oas/shell/enviar_backup_drs.sh
 
 tail -fn 100 /home/oas/scp.log
@@ -60,14 +77,6 @@ http://10.156.80.115:3000/d/qfavsgcbdnheytsvsn/31da8b5?orgId=1&from=now-15m&to=n
 
 
 ------------------------------------------------------------------
-
-ACCESO A CYGNUS_PROD TOAD
-
- BAANGULO
-
- *Baangulo--.
-
-------------------------------------------------------------------------
 
 Plataforma De Internet
 
@@ -149,14 +158,6 @@ find -type f
 tail -n 50 /oracle/oas/1013/opmn/logs/*OC4J_CONSULTA*.log
 
 ----------------------------------------------------------------
-
-SERVIDORES
-
-172.16.40.10 - Seniatso2026
-
-172.17.17.242 - Seniatso2026--. / root lCoPr1b504lXU21Z
-
----------------------------------------------------------------
 
 Comando para ver los discos
 
