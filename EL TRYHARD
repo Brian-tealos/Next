@@ -133,6 +133,9 @@ kill -9 10028208
 
 -----------------------------------------------------------------------------------------
 
+"Control de cambio ambiente de Calidad"
+
+
 Actulizar imagen docker ambiente de QA
 
 ubicar la carpeta y abrir el git bash
@@ -169,4 +172,8 @@ du -sh *
 
 ---------------------------------------------------------
 
-pruebas nuevas
+Actualizacion de Contrasena SIADM (KERUX_PROD) por sistema KAI
+
+
+-----------------------------------------------------------
+
