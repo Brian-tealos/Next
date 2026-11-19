@@ -208,3 +208,11 @@ En el Servidor de Cygnus Prod
 nmon (para ver las estadisticas)
 
 ------------------------------------------------------------
+
+RUTA PARA LOS LOGS DE AMBIENTE DE QA EN CONTRIBUYENTES
+
+df -h
+
+cd/oracle/oas/seniat/logs
+
+--------------------------------------------------------------
