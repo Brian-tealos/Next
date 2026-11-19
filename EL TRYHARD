@@ -2,6 +2,12 @@ ACCESO A KeePass
 
 Dba#M4st3rñ
 
+-------------------------------------------------------------
+
+DIRECCION IP DE MI PC
+
+10.156.106.150
+
 ------------------------------------------------------------
 
 ACCESO A CYGNUS_PROD TOAD
@@ -10,15 +16,22 @@ ACCESO A CYGNUS_PROD TOAD
 
  *Baangulo--.
 
------------------------------------------------------------
+--------------------------------------------------------------
 
 ACCESO A SERVIDORES
 
-172.16.40.10 - Seniatso2026
+SD 172.16.40.10 - Seniatso2026 - USER k8s
 
-172.17.17.242 - Seniatso2026--. / root lCoPr1b504lXU21Z
+PDI 172.17.17.242 - Seniatso2026--. / root lCoPr1b504lXU21Z
+--------------------------------------------------------------
+
+Usuario Airflow
+
+admin admin
 
 -------------------------------------------------------------
+
+Para ver los logs del backups al drs
 
 cat /home/oas/shell/enviar_backup_drs.sh
 
@@ -28,22 +41,31 @@ oas
 
 -----------------------------------------------------------------
 
-en el drs entrar con usuario perso y subir a root
+SERVIDOR DRS
 
+entrar con usuario personal y subir a root
 
+crontab -l
+
+Restaurar OAS
+
+Pegar /root/recupera_oas.sh
 ------------------------------------------------------------------
 
 lsnrctl status (listener control)
 
+(VERIFICAR PARA QUE ES ESTO)
 
 --------------------------------------------------------------------
 
-tnsping cygnus.seniat.gov.ve 10 (comando para verificar latencia)
+(comando para verificar latencia de los OAS a CYGNUS)
 
+tnsping cygnus.seniat.gov.ve 10 
 
 --------------------------------------------------------------
 
 comando opmn para visualizar contenedores en stop,down,init:
+
 watch -n1 'opmnctl status -l | grep -ie OC4J | grep -iv home | grep -v Alive | awk '\''{print $3, $7}'\'''
 
 -------------------------------------------------------------------
@@ -53,21 +75,27 @@ watch -n1 'opmnctl status -l | grep -ie OC4J | grep -iv home | grep -v Alive | a
 
 cat server.xml (eliminar los caracteres de la ultima linea)
 
+(comando para subir un oc4j en especifico)
 
-opmnctl startproc process-type=OC4J_NOMBRE_CONTENEDOR (comando para subir un oc4j en especifico)
+opmnctl startproc process-type=OC4J_NOMBRE_CONTENEDOR 
 
 ------------------------------------------------------------------
 
-Control de cambio (guardar el file en el folder DB)
+Control de cambio (guardar en el NAS)
 
-Luego hacer el backup y pegar el .jar en el directorio
+(Luego hacer el backup)
+
+cp ejemplo.jar ejemplo.jar.BA19112026
+
+Pegar el .jar en el directorio y verificar el mismo
+
+ls -ltra
 
 -----------------------------------------------------------------
 
 Credenciales del cluster QA usuario root
 
 export KUBECONFIG=/etc/kubernetes/admin.conf
-
 
 ----------------------------------------------------------------
 
@@ -93,24 +121,23 @@ SERVICIOS:
 - PDI Plaza Venezuela.
 - Pentaho Inteligencia Fiscal. 172.16.56.10
 
-apagar todos los servicios comando
+---------------------------------------------------------------------
+
+Apagar todos los servicios de SD comando
 
 K8S APPS / K8S SD / MASTER / S01
 
 get pods -A servicios-declaracion
+
 kubectl scale deployment --all --replicas=3 -n servicios-declaracion
+
 kubectl scale deployment --all --replicas=1 -n servicios-declaracion
 
 PARA REINICIAR UN SOLO POD
 
 kubectl delete pod <nombre-del-pod> -n servicios-declaracion
+
 -----------------------------------------------------------------------
-
-Usuario Airflow
-
-admin admin
-
-------------------------------------------------------------------------
 
 Liberar espacio de disco al 100% CYGNUS
 
@@ -121,7 +148,6 @@ rm -rf 071126 241026
 fuser -cu /rman/SENIAT/full_online
 
 resultado de ejemplo: /rman/SENIAT/full_online:  10028208c(oracle)
-
 
 2- (Ejecuta el siguiente comando para ver exactamente qué comando o script de RMAN está corriendo bajo ese PID:)
 
@@ -134,7 +160,6 @@ kill -9 10028208
 -----------------------------------------------------------------------------------------
 
 "Control de cambio ambiente de Calidad"
-
 
 Actulizar imagen docker ambiente de QA
 
@@ -160,6 +185,8 @@ find -type f
 
 tail -n 50 /oracle/oas/1013/opmn/logs/*OC4J_CONSULTA*.log
 
+(VERIFICAR ESTOS LOGS)
+
 ----------------------------------------------------------------
 
 Comando para ver los discos
@@ -172,11 +199,12 @@ du -sh *
 
 ---------------------------------------------------------
 
-Actualizacion de Contrasena SIADM (KERUX_PROD) por sistema KAI
-
+Actualizacion de Contraseña SIADM (KERUX_PROD) por sistema KAI
 
 -----------------------------------------------------------
 
-prueba 17/11
+En el Servidor de Cygnus Prod
 
-///////////////////////////////
+nmon (para ver las estadisticas)
+
+------------------------------------------------------------
