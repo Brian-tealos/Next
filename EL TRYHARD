@@ -51,6 +51,7 @@ Restaurar OAS
 
 Pegar /root/recupera_oas.sh
 ------------------------------------------------------------------
+EN EL SERVIDOR DE LA DB CYGNUS
 
 lsnrctl status (listener control)
 
@@ -209,10 +210,13 @@ nmon (para ver las estadisticas)
 
 ------------------------------------------------------------
 
-RUTA PARA LOS LOGS DE AMBIENTE DE QA EN CONTRIBUYENTES
+RUTA PARA LOS LOGS DE AMBIENTE DE QA EN CONTRIBUYENTES 
+
+(log de retenciones de iva es retenciones.log)
 
 df -h
 
 cd/oracle/oas/seniat/logs
 
 --------------------------------------------------------------
+
