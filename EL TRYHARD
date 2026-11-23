@@ -25,6 +25,11 @@ SD 172.16.40.10 - Seniatso2026 - USER k8s
 PDI 172.17.17.242 - Seniatso2026--. / root lCoPr1b504lXU21Z
 --------------------------------------------------------------
 
+ACCESO APP TRZ 172.17.16.182
+
+ACCESP DB TRZ 172.17.32.82
+
+--------------------------------------------------------------
 Usuario Airflow
 
 admin admin
@@ -51,6 +56,7 @@ Restaurar OAS
 
 Pegar /root/recupera_oas.sh
 ------------------------------------------------------------------
+
 EN EL SERVIDOR DE LA DB CYGNUS
 
 lsnrctl status (listener control)
@@ -220,3 +226,10 @@ cd/oracle/oas/seniat/logs
 
 --------------------------------------------------------------
 
+OPERACIONES MATEMATICAS
+
+bc
+
+123456 - 457899
+
+---------------------------------------------------------------
